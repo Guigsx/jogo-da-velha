@@ -39,7 +39,7 @@ function checkWinner() {
             // O jogo acabou e tem um vencedor.
 
             setTimeout(() => {
-                endGame(`${boxs[a].textContent} venceu!`)
+                endGame(`<h2>${boxs[a].textContent} venceu!</h2><p>Parabéns ao vencedor</p>`)
             }, 250)
 
 
@@ -63,7 +63,7 @@ function endGame(message) {
     const endMessage = document.getElementById('end-message')
     const overlay = document.getElementById('overlay')
 
-    endMessage.textContent = message
+    endMessage.innerHTML = message
     endBox.style.display = 'block'
     overlay.style.display = 'block'
 
